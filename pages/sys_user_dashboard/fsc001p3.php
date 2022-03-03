@@ -1,7 +1,6 @@
 <?php
 $query = "SELECT a.fsc001_number AS jt FROM fsc001_jt a INNER JOIN fsc001p2_jt b ON a.fsc001_id = b.fsc001p2_jtid WHERE b.fsc001p2_id = '{$_GET['id']}'";
 $result = mysqli_query($db, $query);
-$jt = mysqli_query($db, $query);
 $jt = '';
 while($row = mysqli_fetch_array($result))
 {
@@ -113,7 +112,7 @@ $(document).ready(function() {
         "processing": true,
         "serverSide": true,
         "ajax": {
-            url: "pages_exe/sys_user_dashboard/fsc001p2_exe_dt.php",
+            url: "pages_exe/sys_user_dashboard/fsc001p3_exe_dt.php",
             type: "POST",
 			/* success: function(response) {
 				console.log(response);
@@ -133,6 +132,8 @@ $(document).ready(function() {
         $("#section_btn").text('Submit');
         $("#section_btn").attr('name', 'submit_btn');
         $("#section_btn").attr('data-id', '');
+
+        $("#section-form").trigger("reset");    
 
         // /theform.resetForm();
 
@@ -168,21 +169,11 @@ $(document).ready(function() {
     });
 
     function submitForm() {
-
-		//get the value of input box		
-		var fsc001p3_iooid =$('#fsc001p3_iooid').val();
-		var fsc001p3_lotcode =$('#fsc001p3_lotcode').val();
-		var fsc001p3_qtypcs =$('#fsc001p3_qtypcs').val();
-
-        
-        //var fsc001p3_qtykg = (fsc001p2_qtym/0.42545)*10;
-
-		//var data = $("#section-form").serialize() + '&fsc001p3_qtykg=' + fsc001p3_qtykg;
-		//console.log(data);
+        var data = $("#section-form").serialize();
 
 		$.ajax({
             type: 'POST',
-            url: 'pages_exe/sys_user_dashboard/fsc001p2_exe_crud.php ',
+            url: 'pages_exe/sys_user_dashboard/fsc001p3_exe_crud.php ',
             data: data,
             success: function(data, status) {
                 console.log(data);
@@ -208,7 +199,7 @@ $(document).ready(function() {
 
         $.ajax({
             type: 'POST',
-            url: 'pages_exe/sys_user_dashboard/fsc001p2_exe_crud.php',
+            url: 'pages_exe/sys_user_dashboard/fsc001p3_exe_crud.php',
             data: {
                 read_selected: action,
                 crud_id: id
@@ -217,10 +208,11 @@ $(document).ready(function() {
                 //console.log(data);
                 var cruddata = JSON.parse(data);
                 //add the values from the database into the textboxes
-                $("#fsc001p3_lotcode").val(cruddata.fsc001p3_lotcode);
-                $("#fsc001p3_qtypcs").val(cruddata.fsc001p3_qtypcs);             
-		        $('#fsc001p3_iooid').val(cruddata.fsc001p3_iooid);
-                $("#fsc001p3_id").val(cruddata.fsc001p3_id);
+                $('#fsc001p3_iooid').val(cruddata.fsc001p3_iooid);
+                $('#fsc001p3_lotcode').val(cruddata.fsc001p3_lotcode);
+                $('#fsc001p3_qtypcs').val(cruddata.fsc001p3_qtypcs);
+                $('#fsc001p3_id').val(cruddata.fsc001p3_id);
+
 
                 $("#section_btn").attr('name', 'update_btn');
                 $("#section_btn").attr('data-id', cruddata.fsc001p3_id);
@@ -240,7 +232,7 @@ $(document).ready(function() {
             var action = "delete";
             $.ajax({
                 type: 'POST',
-                url: 'pages_exe/sys_user_dashboard/fsc001p2_exe_crud.php',
+                url: 'pages_exe/sys_user_dashboard/fsc001p3_exe_crud.php',
                 data: {
                     delete_selected: action,
                     crud_id: id,
