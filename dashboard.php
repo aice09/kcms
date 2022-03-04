@@ -10,17 +10,37 @@ switch ($view) {
         break;
 
     case 'fsc001' :
-        $title="Checklist";  
+        $title="Job Ticket";  
         $content='pages/sys_user_dashboard/fsc001.php';        
         break;
 
     case 'fsc001p2' :
-        $title="Checklist";  
+        $title="Origin";  
         $content='pages/sys_user_dashboard/fsc001p2.php';        
         break;
     case 'fsc001p3' :
-        $title="Checklist";  
+        $title="Output";  
         $content='pages/sys_user_dashboard/fsc001p3.php';        
+        break;
+    case 'fsc001p4' :
+        $title="Stocks";  
+        $content='pages/sys_user_dashboard/fsc001p4.php';        
+        break;
+    case 'fsc001p5' :
+        $title="Delivery";  
+        $content='pages/sys_user_dashboard/fsc001p5.php';        
+        break;
+    case 'fsc001p6' :
+        $title="Delivery";  
+        $content='pages/sys_user_dashboard/fsc001p6.php';        
+        break;
+    case 'fsc001p7' :
+        $title="Accounting";  
+        $content='pages/sys_user_dashboard/fsc001p7.php';        
+        break;
+    case 'fsc001p8' :
+        $title="Waste";  
+        $content='pages/sys_user_dashboard/fsc001p8.php';        
         break;
 
     default :
