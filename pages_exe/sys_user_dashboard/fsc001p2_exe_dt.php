@@ -2,6 +2,12 @@
 include '../../environment.php';
 include '../../config/database.php';
 
+//if isset $_POST['id']
+/* if(isset($_POST['filterID'])){
+    $filterID = $_POST['filterID'];
+} */
+$filterID = $_POST['filterID'];
+
 $request=$_REQUEST;
 $col =array(
     0   =>  'fsc001p2_id',
@@ -21,9 +27,14 @@ $col =array(
     14   =>  'fsc001p2_status'
 );  //create column like table in database
 
+$sql =" SELECT * FROM fsc001p2_jt WHERE fsc001p2_jtid = '$filterID' ORDER BY fsc001p2_id DESC;";
+
+        /* 
 $sql =" SELECT * FROM fsc001p2_jt
-        /*WHERE fsc001p2_createdby = '{$_SESSION['system_username']}'*/
-        ORDER BY fsc001p2_id DESC;";
+WHERE fsc001p2_jtid = '$filterID'
+ORDER BY fsc001p2_id DESC;"; */
+
+
 $query=mysqli_query($db,$sql);
 
 $totalData=mysqli_num_rows($query);
@@ -33,7 +44,7 @@ $totalFilter=$totalData;
 //Search
 $sql =" SELECT * FROM fsc001p2_jt
         /*WHERE fsc001p2_createdby = '{$_SESSION['system_username']}'*/
-        WHERE 1=1
+        WHERE 1=1 AND fsc001p2_jtid = '$filterID'
         ";
 
 if(!empty($request['search']['value'])){

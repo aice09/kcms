@@ -161,15 +161,23 @@ $(document).ready(function() {
         $('#datetimepicker4').datetimepicker('maxDate', e.date);
     });
 
-    
+    var filterID = $('#fsc001p2_jtid').val();
+    //add filterID to json for datatable
+
+
+
     //Reading
     var dataTable = $('#example').DataTable({        
         "processing": true,
         "serverSide": true,
+
         "ajax": {
             url: "pages_exe/sys_user_dashboard/fsc001p2_exe_dt.php",
-            type: "POST",
-			/* success: function(response) {
+            data: {
+                filterID: filterID
+            },
+            type: "POST",/* 
+			success: function(response) {
 				console.log(response);
 			},
 			error: function(response) {
