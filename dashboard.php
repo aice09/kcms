@@ -4,9 +4,9 @@ require_once 'environment.php';
 $view = (isset($_GET['page']) && $_GET['page'] != '') ? $_GET['page'] : '';
 switch ($view) {
 	//My Profile
-    case 'myprofile-calendar' :
-        $title="Checklist";  
-        $content='pages/sys_user_dashboard/myprofile/calendar.php';        
+    case 'fsccategory' :
+        $title="FSC Category";  
+        $content='pages/sys_user_dashboard/fsccategory.php';        
         break;
 
     case 'fsc001' :

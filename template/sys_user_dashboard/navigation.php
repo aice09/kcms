@@ -75,7 +75,9 @@
                         <li class="nav_foldericon">
                             <a href="#"><i  class="fa fa-folder-o fa-fw"></i> FSC <span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
-                                <li> <a href="dashboard.php?page=fsc001">Mix Paper Cups</a></li>
+                                <li> <a href="dashboard.php?page=fsc001">FSC Items</a></li>
+                                <li> <a href="dashboard.php?page=fsccategory">FSC Category</a></li>
+                                <li> <a href="dashboard.php?page=fscexport">FSC Export</a></li>
                                 <li> <a href="#">Mix Box</a></li>
                                 <li> <a href="#">Mix Cup Sleeves</a></li>
                                 <li> <a href="#">Mix(BK) Paper Bags</a></li>
