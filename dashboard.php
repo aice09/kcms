@@ -1,6 +1,13 @@
 <?php 
 require_once 'environment.php';
-
+/*             if (isset($_SESSION['system_logged_in'])==false) { 
+    ?>        
+                <script type="text/javascript">
+                    window.location="login.php";
+                </script>
+    <?php 
+            } */
+        
 $view = (isset($_GET['page']) && $_GET['page'] != '') ? $_GET['page'] : '';
 switch ($view) {
 	//My Profile

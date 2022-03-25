@@ -78,22 +78,6 @@
                                 <li> <a href="dashboard.php?page=fsc001">FSC Items</a></li>
                                 <li> <a href="dashboard.php?page=fsccategory">FSC Category</a></li>
                                 <li> <a href="dashboard.php?page=fscexport">FSC Export</a></li>
-                                <li> <a href="#">Mix Box</a></li>
-                                <li> <a href="#">Mix Cup Sleeves</a></li>
-                                <li> <a href="#">Mix(BK) Paper Bags</a></li>
-                                <li> <a href="#">Mix Cup Carrier</a></li>
-                                <li> <a href="#">Mix Food Wraps</a></li>
-                                <li> <a href="#">Mix Food Wraps P2</a></li>
-                                <li> <a href="#">Recycled Paper Bags</a></li>
-                                <li> <a href="#">Mix(GP) Paper Bags</a></li>
-                                <li> <a href="#">Bottoms</a></li>
-                                <li> <a href="#">Non-FSC Items (P2S)</a></li>
-                                <li> <a href="#">non-FSC TL&CM</a></li>
-                                <li> <a href="#">non-FSC P1S</a></li>
-                                <li> <a href="#">non-FSC greaseproof</a></li>
-                                <li> <a href="#">NON-FSC BROWN KRAFT</li>
-                                <li> <a href="#">NOn-FSC Kraftpack (2 sides brow</a></li>
-                                <li> <a href="#">NON-FSC Carrier Board</a></li>
                             </ul>
                         </li>  
                         <!-- <li class="nav_foldericon">

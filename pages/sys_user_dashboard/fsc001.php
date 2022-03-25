@@ -55,6 +55,15 @@
 				</div>
 				<div class="modal-body">
 					<div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<div class="form-group">
+								<label for="">Category</label>                                
+                                <select name="" id="input" class="form-control" required="required">
+                                    <option value="">Select Category</option>
+                                </select>                                
+								<span id="check-e" class="check-e-schednumber"></span>
+							</div>
+						</div>
 						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 							<div class="form-group">
 								<label for="">Schedule Number</label>
